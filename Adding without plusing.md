@@ -54,14 +54,13 @@ __Thirdly__, we can use '&' to find out whether two digits are both ones(the 4th
 
     7 - 18 = 7 + (-18) = -11;
     7 -> 0000 0111 
-    18's sign-and-magnitude: 0001 0010 
-       ->  ones' complement: 1110 1101
-       ->  two's complement: 1110 1110
+    18's sign-and-magnitude:  0001 0010 
+        ->  ones' complement: 1110 1101
+        ->  two's complement: 1110 1110
     -18 -> 1110 1110
     7 - 18 = 0000 0111 + 1110 1110  = 1111 0101 
-                          1111 0101 
-    ->  ones' complement: 0000 1010 + 1 
-    ->  two's complement: 0000 1011 -> -11 
+        ->  ones' complement: 0000 1010 + 1 
+        ->  two's complement: 0000 1011 -> -11 
     
            Xor                Carry
              0000 0111          0000 0111
