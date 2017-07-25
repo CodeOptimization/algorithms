@@ -27,14 +27,16 @@ __Thirdly__, we can use '&' to find out whether two digits are both ones(the 4th
     7 + 18 = 25;
     -> 0000 0111 + 0001 0010 = 0001 1001  
                 
-              0000 0111          0000 0111
+
+                              
+              0000 0111          0000 0111
             ^ 0001 0010        & 0001 0010
             ------------       -----------
             = 0001 0101        = 0000 0010
                                << 1 (because we are calculating carry, we need to move one left digit)
                                -----------
                                = 0000 0100
-                              
+            
               0000 0100          0000 0100
             ^ 0001 0101        & 0001 0101
             -----------        -----------
