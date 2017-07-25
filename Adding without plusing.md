@@ -27,7 +27,7 @@ __Thirdly__, we can use '&' to find out whether two digits are both ones(the 4th
     7 + 18 = 25;
     -> 0000 0111 + 0001 0010 = 0001 1001  
               
-                           
+            Xor                Carry
               0000 0111          0000 0111
             ^ 0001 0010        & 0001 0010
             ------------       -----------
