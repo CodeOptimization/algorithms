@@ -26,8 +26,8 @@ __Thirdly__, we can use '&' to find out whether two digits are both ones(the 4th
 
     7 + 18 = 25;
     -> 0000 0111 + 0001 0010 = 0001 1001  
-    
-              0000 0111          0000 0111
+            Xor                Carry     
+              0000 0111          0000 0111
             ^ 0001 0010        & 0001 0010
             ------------       -----------
             = 0001 0101        = 0000 0010
@@ -61,7 +61,7 @@ __Thirdly__, we can use '&' to find out whether two digits are both ones(the 4th
                           1111 0101 
     ->  ones' complement: 0000 1010 + 1 
     ->  two's complement: 0000 1011 -> -11 
-    
+           Xor                Carry
              0000 0111          0000 0111
            ^ 1110 1110        & 1110 1110
             -----------       -----------
