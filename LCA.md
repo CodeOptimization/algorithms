@@ -2,7 +2,7 @@ In this profile we are trying to solve the Lowest Common Ancestor(LCA) problem. 
 demostrate the algorithms on 
   * Binary Search Tree
   * Binary Tree  
-  * Regular Trees
+  * Regular Trees
   
   
 This version is focuesd to Recusive algorithms and itearative algorithms will be updated later.
