@@ -99,7 +99,36 @@ The code as below:
     }
     
 ```
+3. Obviously, the previous algorithms is too tedious， because we can just search in two parts: if(key < m[mid][mid]) then search in  {[_upperLeft, up(1D), upperRight_] and [_left(1D), lowerleft_]}; else if(key > m[mid][mid]) then search in{[_lowerLeft, down(1D), lowerRight_] and [_upperRight, right(1D)_]} and the last case will be key == m[mid][mid] you just return the indecies; 
+```java
+    public int[] binarySearchInArray2(int[][] matrix, int key, int r1, int r2, int c1, int c2) {
+        if (r1 > r2 || c1 > c2)
+            return null;
 
-     
+        int rMid = (r1 + r2) / 2, cMid = (c1 + c2) / 2;
+        if (matrix[rMid][cMid] > key) {
+            //search in the top and left
+            int[] upper = binarySearchInArray2(matrix, key, r1, rMid - 1, c1, c2);
+            if (upper != null)
+                return upper;
+            int[] left = binarySearchInArray2(matrix, key, rMid, r2, c1, cMid - 1);
+            if (left != null)
+                return left;
+        } else if (matrix[rMid][cMid] < key) {
+            //search in the lower part and right
+            int[] lower = binarySearchInArray2(matrix, key, rMid + 1, r2, c1, c2);
+            if (lower != null)
+                return lower;
+            int[] right = binarySearchInArray2(matrix, key, r1, rMid, cMid + 1, c2);
+            if (right != null)
+                return right;
+        } else {
+            return new int[]{rMid, cMid};
+        }
+        return null;
+    }
+
+```
+
 
 
