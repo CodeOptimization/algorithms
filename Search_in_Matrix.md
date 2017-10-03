@@ -6,8 +6,7 @@ For example: In {{ 1,  5,  8, 13}, { 9, 13, 15, 17}, {10, 18, 19, 20}, {11, 21, 
 # Analysis
 1. The most trival approach will be scan the matrix row by row and column by column, the complexity will be O(mn);
 
-2. Since it's ordered in row and column, you may link that to "Binary search" immediately, (though this would be not so efficient even compared as trival solutioin, but it's a great exercise to binary search).
-Similarly, we can devide the matrix by the middle element as below
+2. Since it's ordered in row and column, you may link that to "Binary search" immediately. As a result of this, we can devide the matrix by the middle element as below
 
 |Matrix| | | 
 |:-:|:-:|:-:|
@@ -129,6 +128,14 @@ The code as below:
     }
 
 ```
+#### Time complexity: 
+Given the input size as _n_, T(n) = T(n/2) + T(n/4) + O(1); According to Akra Bazzi
 
+
+
+#### Reference
+
+  * https://en.wikipedia.org/wiki/Akra%E2%80%93Bazzi_method
+  
 
 
