@@ -131,7 +131,7 @@ The code as below:
 #### Time complexity: 
 Given the input size as _n_, _T(n) = T(n/2) + T(n/4) + O(1)_; According to __Akra Bazzi Theorem__ we have:
 
-_T(n) = Theta(n^log_2(Phi))_, which is _log_2(Phi)_ roughtly equals 0.69424191363... . Where the proof is [here](https://www.google.com).
+_T(n) = Theta(n^log_2(Phi))_, which is _log_2(Phi)_ roughtly equals 0.69424191363... . Where the proof is [here](https://github.com/CodeOptimization/algorithms/blob/master/Akra_Bazzi_Theorem.md).
 
 
 
