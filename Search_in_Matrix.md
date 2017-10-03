@@ -141,8 +141,32 @@ Obviously, the previous algorithms is too tedious， because we can just search 
 #### Time complexity: 
 Given the input size as _n_, _T(n) = T(n/2) + T(n/4) + O(1)_; According to __Akra Bazzi Theorem__ we have:
 
-_T(n) = Theta(n^log_2(Phi))_, which is _log_2(Phi)_ roughtly equals 0.69424191363... and the proof is [here](https://github.com/CodeOptimization/algorithms/blob/master/Akra_Bazzi_Theorem.md).
+_T(n) = Theta(n^log_2(Phi))_, which is _log_2(Phi)_ roughly equals 0.69424191363... and the proof is [here](https://github.com/CodeOptimization/algorithms/blob/master/Akra_Bazzi_Theorem.md).
 
+### Can we do even better?
+
+3. Linear time search O(m + n):
+
+And the answer is Yes, we can do better even with out binary search. Searching from right top corner, when you encounter a element that is 
+smaller than _key_, go dowm(next row), while a larger element, go left(column of left size) and last case is equal which means you find it. Either you will find the element and stop, or you will run out of rows and columns that means no such an element.
+
+```java
+public int[] linearSearch(int[][] matrix, int key){
+	    if(matrix == null || matrix.length == 0 || matrix[0].length == 0)
+	        return null;
+	    int i = 0, j = matrix[0].length - 1;
+	    while(i < matrix.length && j >= 0){
+	        if(matrix[i][j] > key)
+	            j--;
+	        else if(matrix[i][j] < key)
+	            i++;
+	        else
+	            return new int[]{i, j};
+	    }
+	    return null;
+	} 
+
+```
 
 
 #### Reference
