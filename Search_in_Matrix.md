@@ -107,7 +107,8 @@ The code as below:
     }
     
 ```
-3. Obviously, the previous algorithms is too tedious， because we can just search in two parts: if(key < m[mid][mid]) then search in  {[_upperLeft, up(1D), upperRight_] and [_left(1D), lowerleft_]}; else if(key > m[mid][mid]) then search in{[_lowerLeft, down(1D), lowerRight_] and [_upperRight, right(1D)_]} and the last case will be key == m[mid][mid] you just return the indecies; 
+### Can we do better?
+Obviously, the previous algorithms is too tedious， because we can just search in two parts: if(key < m[mid][mid]) then search in  {[_upperLeft, up(1D), upperRight_] and [_left(1D), lowerleft_]}; else if(key > m[mid][mid]) then search in{[_lowerLeft, down(1D), lowerRight_] and [_upperRight, right(1D)_]} and the last case will be key == m[mid][mid] you just return the indecies; 
 ```java
     public int[] binarySearchInArray2(int[][] matrix, int key, int r1, int r2, int c1, int c2) {
         if (r1 > r2 || c1 > c2)
