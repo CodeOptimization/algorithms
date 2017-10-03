@@ -1,7 +1,7 @@
 
 # Question:
 > Given a matrix of m * n integers, each row and column is in non-decreasing order. To find a target key in the matrix.
-For example: Matrix as below(basiclly it's a twp dimensional array):
+For example: Matrix as below(basically it's a two dimensional array):
 
 |Ma|-tr|-ix|:| 
 |:-:|:-:|:-:|:-:|
@@ -13,9 +13,9 @@ For example: Matrix as below(basiclly it's a twp dimensional array):
 the location of 13 is either [0, 3] or [1, 1].
 
 # Analysis
-1. The most trival approach will be scan the matrix row by row and column by column, the complexity will be O(mn);
+1. The most trivial approach will be scan the matrix row by row and column by column, the complexity will be O(mn);
 
-2. Since it's ordered in row and column, you may link that to "Binary search" immediately. As a result of this, we can devide the matrix by the middle element as below
+2. Since it's ordered in row and column, you may link that to "Binary search" immediately. As a result of this, we can divide the matrix by the middle element as below
 
 |Matrix| | | 
 |:-:|:-:|:-:|
@@ -108,7 +108,7 @@ The code as below:
     
 ```
 ### Can we do better?
-Obviously, the previous algorithms is too tedious， because we can just search in two parts: if(key < m[mid][mid]) then search in  {[_upperLeft, up(1D), upperRight_] and [_left(1D), lowerleft_]}; else if(key > m[mid][mid]) then search in{[_lowerLeft, down(1D), lowerRight_] and [_upperRight, right(1D)_]} and the last case will be key == m[mid][mid] you just return the indecies; 
+Obviously, the previous algorithms is too tedious， because we can just search in two parts: if(key < m[mid][mid]) then search in  {[_upperLeft, up(1D), upperRight_] and [_left(1D), lowerleft_]}; else if(key > m[mid][mid]) then search in{[_lowerLeft, down(1D), lowerRight_] and [_upperRight, right(1D)_]} and the last case will be key == m[mid][mid] you just return the indices; 
 ```java
     public int[] binarySearchInArray2(int[][] matrix, int key, int r1, int r2, int c1, int c2) {
         if (r1 > r2 || c1 > c2)
@@ -148,7 +148,7 @@ _T(n) = Theta(n^log_2(Phi))_, which is _log_2(Phi)_ roughly equals 0.69424191363
 3. Linear time search O(m + n):
 
 And the answer is Yes, we can do better even with out binary search. Searching from right top corner, when you encounter a element that is 
-smaller than _key_, go dowm(next row), while a larger element, go left(column of left size) and last case is equal which means you find it. Either you will find the element and stop, or you will run out of rows and columns that means no such an element.
+smaller than _key_, go down(next row), while a larger element, go left(column of left size) and last case is equal which means you find it. Either you will find the element and stop, or you will run out of rows and columns that means no such an element.
 
 ```java
 public int[] linearSearch(int[][] matrix, int key){
