@@ -49,7 +49,6 @@ You need to return the first occurence of the element, otherwise -1.
         int res = -1, lo = 0, hi = nums.length - 1;
         while(lo <= hi){
             int mid = (lo + hi) / 2;
-//             System.out.println("lo = " + lo + ", mid = " + mid + ", hi = " + hi);
             if(nums[mid] < target){
                 lo = mid + 1;
             }else if(nums[mid] == target){
@@ -81,7 +80,6 @@ You need to return the first occurence of the element, otherwise -1.
         int res = -1, lo = 0, hi = nums.length - 1;
         while(lo <= hi){
             int mid = (lo + hi) / 2;
-//             System.out.println("lo = " + lo + ", mid = " + mid + ", hi = " + hi);
             if(nums[mid] < target){
                 lo = mid + 1;
             }else if(nums[mid] == target){
