@@ -37,7 +37,22 @@
 You need to return the first occurence of the element, otherwise -1.
 
 ```java
-  
+    public int binarySearchCloest(int[] nums, int target){
+        int res = -1, lo = 0, hi = nums.length - 1, diff = Integer.MAX_VALUE;
+        while(lo <= hi){
+            int mid = (lo + hi) / 2;
+            if(nums[mid] < target){
+                lo = mid + 1;
+                res = target - nums[mid] < diff ? mid : res;
+            }else if(nums[mid] == target){
+                return mid;
+            }else{
+                hi = mid - 1;
+                res = nums[mid] - target < diff ? mid : res;
+            }
+        }
+        return res;
+    }
 ```
 
 
