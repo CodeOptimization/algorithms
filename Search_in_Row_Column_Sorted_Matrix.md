@@ -169,7 +169,9 @@ public int[] linearSearch(int[][] matrix, int key){
 ```
 
 # Question
-What if we add one more condition: _The first integer of each row is greater than the last integer of the previous row._
+What if we add one more condition: 
+
+_The first integer of each row is greater than the last integer of the previous row._
 
 # Solution
 You can just treat this problem as a one dimensional array. Code as below:
@@ -193,7 +195,7 @@ You can just treat this problem as a one dimensional array. Code as below:
         return false;
     }
 ```
-
+What about the time complexity?  O(log(m) + log(n)), or in other words, O(log(mn)).
 
 
 #### Reference
