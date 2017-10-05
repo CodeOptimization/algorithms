@@ -168,6 +168,33 @@ public int[] linearSearch(int[][] matrix, int key){
 
 ```
 
+# Question
+What if we add one more condition: _The first integer of each row is greater than the last integer of the previous row._
+
+# Solution
+You can just treat this problem as a one dimensional array. Code as below:
+
+```java
+    public boolean searchMatrix(int[][] matrix, int target) {
+        if(matrix == null || matrix.length == 0 ||  matrix[0].length == 0)
+            return false;
+        int m = matrix.length, n = matrix[0].length;
+        int lo = 0, hi = m * n - 1;
+        while(lo <= hi){
+            int mid = (lo + hi) / 2;
+            int row = mid / n, col = mid % n;
+            if(target < matrix[row][col])
+                hi = mid - 1;
+            else if(target > matrix[row][col])
+                lo = mid + 1;
+            else
+                return true;
+        }
+        return false;
+    }
+```
+
+
 
 #### Reference
 
