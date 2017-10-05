@@ -34,7 +34,6 @@
 ```
 
 ## Return Closest
-You need to return the first occurence of the element, otherwise -1.
 
 ```java
     public int binarySearchCloest(int[] nums, int target){
@@ -57,7 +56,7 @@ You need to return the first occurence of the element, otherwise -1.
 
 
 ## With Duplicates
-
+You need to return the first and last occurence of the element, otherwise -1.
 
 ```java
     public int binarySearchFirstOccurence1(int[] nums, int target){
