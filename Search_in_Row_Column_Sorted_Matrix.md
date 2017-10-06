@@ -13,7 +13,9 @@ For example: Matrix as below(basically it's a two dimensional array):
 the location of 13 is either [0, 3] or [1, 1].
 
 # Analysis
-1. The most trivial approach will be scan the matrix row by row and column by column, the complexity will be O(mn);
+Let's say the size of matrix is n;
+
+1. The most trivial approach will be scan the matrix row by row and column by column, the complexity will be O(n);
 
 2. Since it's ordered in row and column, you may link that to "Binary search" immediately. As a result of this, we can divide the matrix by the middle element as below
 
